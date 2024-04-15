@@ -1,19 +1,22 @@
 package Lesson_2;
 
-public class program {
-    public static void main(String[] args) {
-        var s = System.currentTimeMillis();
-        //String str = "";
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < 1_000_000; i++) {
-        //str += "+";
-        sb.append("+");
-        }
-        System.out.println(System.currentTimeMillis() - s);
-        //System.out.println(str);
-        //System.out.println(sb);
-        } 
-}
+// public class program {
+//     public static void main(String[] args) {
+//         var s = System.currentTimeMillis();
+//         //String str = "";
+//         StringBuilder sb = new StringBuilder();
+//         for (int i = 0; i < 1_000_000; i++) {
+//         //str += "+";
+//         sb.append("+");
+//         }
+//         System.out.println(System.currentTimeMillis() - s);
+//         //System.out.println(str);
+//         //System.out.println(sb);
+//         } 
+// }
+
+
+
 
 
 // API (Application programming interface) —
@@ -22,6 +25,7 @@ public class program {
 // делать то и это».
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Что такое API для нас: строки
 
 // функционал строк:
@@ -40,3 +44,93 @@ public class program {
 // сompareTo(): сравнивает две строки
 // equals(): сравнивает строки с учетом регистра
 // equalsIgnoreCase(): сравнивает строки без учета регистра
+
+// public class program {
+//     public static void main(String[] args) {
+//         String[] name = { "C", "е", "р", "г", "е", "й" };
+//         String sk = "СЕРГЕЙ КА.";
+//         System.out.println(sk.toLowerCase()); // сергей ка.
+//         System.out.println(String.join("", name)); // Cергей
+//         System.out.println(String.join("", "C", "е", "р", "г", "е", "й"));
+//         // C,е,р,г,е,й
+//         System.out.println(String.join(",", "C", "е", "р", "г", "е", "й"));
+//     }
+// }
+
+// Много изменений – String
+// Много преобразований – StringBuilder
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Работа с файловой системой. Файлы. Ошибки
+// try {
+//     Код, в котором может появиться ошибка
+//    } catch (Exception e) {
+//     Обработка, если ошибка случилась
+//    }
+//    finally {
+//     Код, который выполнится в любом случае
+// }
+
+import java.io.File;
+public class program {
+ public static void main(String[] args) {
+ try {
+ String pathProject = System.getProperty("user.dir");
+ String pathFile = pathProject.concat("/file.txt");
+ File f3 = new File(pathFile);
+ System.out.println("try");
+ } catch (Exception e) {
+ System.out.println("catch");
+ }
+ finally
+ { System.out.println("finally"); }
+ }
+}
+
+
+// функционал:
+
+// isHidden(): возвращает истину, если каталог или файл является скрытым
+// length(): возвращает размер файла в байтах
+// lastModified(): возвращает время последнего изменения файла или каталога
+// list(): возвращает массив файлов и подкаталогов, которые находятся в каталоге
+// listFiles(): возвращает массив файлов и подкаталогов, которые находятся
+// в определенном каталоге
+// mkdir(): создает новый каталог
+// renameTo(File dest): переименовывает файл или каталог
+// length(): возвращает размер файла в байтах
+// lastModified(): возвращает время последнего изменения
+// файла или каталога
+// list(): возвращает массив файлов и подкаталогов, которые находятся в каталоге
+// listFiles(): возвращает массив файлов и подкаталогов, которые
+// находятся в определенном каталоге
+// mkdir(): создает новый каталог
+// renameTo(File dest): переименовывает файл или каталог
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Логирование
+
+// Логи содержат системную информацию работы
+// программного или аппаратного комплекса.
+// В них записываются действия разного приоритета
+// от пользователя, или программного продукта.
+// Процесс ведения логов называют
+// “логированием” (журналированием).
+
+
+// Логирование. Использование. Основы
+// Использование
+// Logger logger = Logger.getLogger()
+// Уровни важности
+// INFO, DEBUG, ERROR, WARNING и др.
+// Вывод
+// ConsoleHandler info = new ConsoleHandler();
+// log.addHandler(info);
+// Формат вывода: структурированный, абы как*
+// XMLFormatter, SimpleFormatter
+
